@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in Latex
+% Author : Shajal Ahamed
+% Website: 
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{ https://www.linkedin.com/in/shajal-ahamed-277a3379/}{\Large Shajal Ahamed}} & Email : \href{mailto:shajalahamedcse@gmail.com}{shajalahamedcse@gmail.com}
+  
+  \\
+  \href{}{Software Engineer} & Mobile : +8801620256783 \\
+  \href{https://www.linkedin.com/in/shajal-ahamed-277a3379/}{LinkedIn}  &
+  \href{https://github.com/shajalahamedcse}{Github}\\
+  \href{https://medium.com/@shajalahamedcse}{Medium}\\
+  \href{https://stackoverflow.com/users/5609026/shajal-ahamed}{Stackoverflow}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chittagong University of Engineering and Technology} { Chittagong, Bangladesh}
+      {Bachelor of Science in Computer Science and Engineering; }{Feb. 2012 -- Dec. 2019 (Expected)}
+
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: \textbf{Python}, \textbf{C++}, \textbf{Javascript}, SQL, Java , Go, Solidity}
+     \hfill
+   }
+   \item{
+   \textbf{Technologies}{: \textbf{MYSQL}, MongoDB, InfluxDB, Android, Hyperledger Fabric, Hyperledger Composer }
+   }
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Renata Ltd.}{Dhaka, Mirpur}
+      {Software Engineer}{Mar. 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{RenataVisio}{ It was an Industrial IOT project that scrapes various sensor and actuator data from more than two hundreds of production machine. Then Saving the scraped data into Influxdb.\\
+    \smallskip 
+	  \hspace{20pt}\textbf{Language} : {Python, Javascript(D3).}\\
+	  \hspace{20pt}\textbf{Database} : {InfluxDB, MySql.}\\
+	 \hspace{20pt}\textbf{Tools} : {Kibana.}\\
+	 \hspace{20pt}\textbf{Project Evaluation}: {Eighty Thousand Usd.}
+	 
+	 
+	 }
+	 \smallskip
+	  
+        \resumeItem{Data Pipeline}
+          {In Renata, there are more than two hundred machine. Every machine has more or less thirty sensors and actuators. Gathering data from these devices need different approach. In some places we used MySQL (for critical error data) and in others we used InfluxDB (for time series data). This data pipeline is a common data bus for RenataVisio.}
+    \smallskip
+      \resumeItem{Notification System}
+          {This service is used for sending push notifications to the maintenance engineer about sensor and actuator malfunction. It is connected with RenataVisio's data pipeline so that it can send notification promptly.}
+          \smallskip
+    \resumeItem{Maintenance Scheduling}
+          {Based on the sensor and actuator data RenataVisio's internal system make a list of machines for next primitive maintenance. As work force is limited so  used greedy algorithm to schedule the maintenance list. Then used D3js to visualize the maintenance calender. }
+          \smallskip
+    \resumeItem{Type-ahead Suggestion System}
+          {One can not memorize all sensors and actuators model name. Trie data-structure is used for this suggestion system. So RenataVisio's sensor searching panel will guide someone to find sensor name and quantity from our four thousand sensors inventory database.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ObboyLabs}{Dhaka, CA}
+      {Blockchain Developer (Part-time)}{September 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{MediTracker}
+          {A proof of work end-to-end Blockchain application that makes use of Hyperledger Fabric and Composer to track the shipment of medicine. This project is in the showcase of official \textbf{\href{https://www.hyperledger.org/resources/blockchain-showcase?profile=obboy-labs}{Hyperledger fabric page}.}}\\
+	\smallskip 
+	  \hspace{20pt}\textbf{Tools} : {Hyperledger Fabric, Hyperledger Composer, Android.}\\
+	  \hspace{20pt}\textbf{GithubLink} : {Hyperledger Fabric, Hyperledger Composer, Android.}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Achievements}
+ \resumeSubHeadingListStart
+	 \item  \textbf{iARC-2012}\\
+	     \smallskip 
+	  \hspace{20pt}{Champion in  Bangladesh Round.}\\
+	  \hspace{20pt}{Fourth Position in International Round. (IIT, Kanpur)}
+  \resumeSubHeadingListEnd
+
+%
+
+\section{Reference}
+ \resumeSubHeadingListStart
+  \item  \textbf{Mohammad Shamsul Arefin} \\Assistant Professor, Department of Computer Science and Engineering, CUET\\
+  \href{mailto:sarefin@cuet.ac.bd}{\textbf{sarefin@cuet.ac.bd}}  \\
+  Mobile : +8801620256783 \\
+   
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
